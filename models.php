@@ -7,13 +7,12 @@ class Model {
     public $valid_types;
 
     // валидация данных
-    private function validate(Array $data) {
+    public function validate(Array $data) {
         if (count($data) === count($this->valid_types)) {
             foreach ($data as $param => $value) {
-
-                if (gettype($value) != $this->valid_types[$param][0] ||
-                    ($this->valid_types[$param][0] === 'string' && strlen($value) < 0) ||
-                    (isset($this->valid_types[$param][1]) && strlen($value) > $this->valid_types[$param][1]) ) {
+                if ((gettype($value) != $this->valid_types[$param][0]) ||
+                    ($this->valid_types[$param][0] === 'string' && strlen($value) == 0) ||
+                    (isset($this->valid_types[$param][1]) && strlen($value) > $this->valid_types[$param][1])) {
                     return false;
                 }
             }
@@ -125,5 +124,4 @@ class Comment extends Model  {
         } else return mysqli_fetch_all($res, MYSQLI_ASSOC);
     }
 }
-
 

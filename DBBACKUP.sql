@@ -19,7 +19,13 @@
 -- Current Database: `msg_wall`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `msg_wall` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE USER 'msg_wall'@'localhost' IDENTIFIED BY '2o33f39aDSA9!';
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `msg_wall` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+GRANT ALL PRIVILEGES ON *.* TO 'msg_wall'@'localhost';
+
+FLUSH PRIVILEGES;
 
 USE `msg_wall`;
 
@@ -29,7 +35,7 @@ USE `msg_wall`;
 
 DROP TABLE IF EXISTS `comments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `comments` (
   `id` int NOT NULL AUTO_INCREMENT,
   `msg` int NOT NULL,
@@ -38,7 +44,7 @@ CREATE TABLE `comments` (
   PRIMARY KEY (`id`),
   KEY `msg` (`msg`),
   CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`msg`) REFERENCES `messages` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +62,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `messages`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `messages` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(30) NOT NULL,
@@ -64,7 +70,7 @@ CREATE TABLE `messages` (
   `short_text` varchar(200) NOT NULL,
   `full_text` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
