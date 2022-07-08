@@ -1,0 +1,235 @@
+@font-face {
+    font-family: "Bahnschrift";
+    src: url("Bahnschrift.ttf") format("truetype");
+    font-style: normal;
+
+}
+
+body {
+    background: #fcfcff;
+}
+
+header {
+
+    text-align: center;
+    padding: 2%;
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 2.5em;
+    font-width: 1em;
+}
+
+
+h3,
+h4,
+label {
+    font-family: "Bahnschrift", sans-serif;
+
+}
+
+h2 {
+    font-family: "Bahnschrift", sans-serif;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p, label {
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 1.2em;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: lighter;
+}
+
+p.status {
+    font-size: 2em;
+}
+
+button {
+    font-family: "Bahnschrift", sans-serif;
+    width: 20%;
+    height: 10%;
+}
+
+
+div.not-found {
+    font-family: "Bahnschrift", sans-serif;
+    text-align: center;
+}
+
+
+div.info-box {
+    background-color: #e4edfc;
+    border: 2px solid #587cb9;
+    border-radius: 20px;
+    width: 50%;
+    margin: 1% auto 1%;
+    padding: 1%;
+}
+
+div.message-button {
+    background-color: #c8d9f6;
+
+}
+
+div.message-button:hover {
+    background-color: #ecf1fa;
+
+}
+
+a.message-button {
+    color: black;
+    text-decoration: none;
+}
+
+div.info-box-2 {
+    background-color: #deeaf5;
+    border: 2px solid #587cb9;
+    border-radius: 20px;
+    width: 50%;
+    margin: 1% auto 1%;
+    padding: 1%;
+}
+
+div.comment {
+    text-align: left;
+
+}
+
+div.msg-id {
+    display: block;
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 1.5em;
+    background-color: #587cb9;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 2em;
+    position: absolute;
+    border-radius: 10px;
+}
+
+div.line {
+    width: 40%;
+    padding-top: 0.3%;
+    margin: 0 auto;
+    background-color: #587cb9;
+}
+
+
+
+button.navigate{
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 20px;
+    background: #d4eeeb;
+    border: none;
+    width: 50%;
+    padding: 2%;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+
+button.navigate:hover {
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 20px;
+    background-size: 100% 100%;
+    background: #bfdbf5 linear-gradient(#b0e3ea, #7dcfd7);
+    width: 50%;
+    padding: 2%;
+    margin-top: 2%;
+    border-radius: 10px;
+
+}
+
+
+button.page {
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 20px;
+    background-color: #587cb9;
+    color: white;
+    width: 3%;
+    padding: 0.5%;
+    border-radius: 10px;
+    border: none;
+    margin: 0 0.5%;
+}
+
+button.page:hover {
+    background: #bfdbf5 linear-gradient(#b0e3ea, #8ed1da 50%, #7dcfd7);
+    color: black;
+}
+
+button.page-current {
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 20px;
+    background-color: #aebfdc;
+    color: white;
+    width: 3%;
+    padding: 0.5%;
+    border-radius: 10px;
+    border: none;
+    margin: 0 0.5%;
+
+}
+
+
+button.msg,
+input[type=submit] {
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 1.15em;
+    border: none;
+    background-color: #587cb9;
+    color: white;
+    width: 10em;
+    padding: 0.5%;
+    border-radius: 10px;
+    margin-top:1%;
+    margin-bottom: 1%;
+}
+
+
+
+input[type=submit] {
+    padding: 1%;
+    font-size: 1.3em;
+}
+
+input[type=text] {
+    font-family: "Bahnschrift", sans-serif;
+    display: block;
+    margin: 1% auto;
+    border: 1px solid #587cb9;
+    font-size: 1.3em;
+    padding: 0.2em 0.1em;
+    border-radius: 3px;
+}
+
+textarea {
+    font-family: "Bahnschrift", sans-serif;
+    border: 1px solid #587cb9;
+    display: block;
+    margin: 1% auto;
+    font-size: 1.3em;
+    padding: 0.2em 0.1em;
+    border-radius: 3px;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    border-width: 3px;
+    outline:none;
+}
+
+button.msg:hover,
+input[type=submit]:hover {
+    color: black;
+    background: #bfdbf5 linear-gradient(#b0e3ea, #8ed1da 50%, #7dcfd7);
+}
