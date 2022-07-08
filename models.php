@@ -7,7 +7,7 @@ class Model {
     public $valid_types;
 
     // валидация данных
-    public function validate(Array $data) {
+    private function validate(Array $data) {
         if (count($data) === count($this->valid_types)) {
             foreach ($data as $param => $value) {
                 if ((gettype($value) != $this->valid_types[$param][0]) ||
